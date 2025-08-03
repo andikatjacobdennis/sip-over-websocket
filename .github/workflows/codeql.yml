@@ -1,9 +1,8 @@
-# CodeQL Analysis 
-name: "CodeQL" 
-on: [push] 
-jobs: 
-"  analyze:" 
-"    runs-on: windows-latest" 
-"    steps:" 
-"    - name: Initialize CodeQL" 
-"      uses: github/codeql-action/init@v1" 
+name: "CodeQL"
+on: [push]
+jobs:
+  analyze:
+    runs-on: windows-latest
+    steps:
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
