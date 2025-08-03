@@ -213,30 +213,30 @@ SIP Server → Alice: 200 OK
 
 SIP Response Codes Table
 
-## Code, Category, Meaning, and Typical Use Case
+## 📘 **SIP Response Codes Table**
 
-| Code | Category | Meaning | Typical Use Case |
-| --- | --- | --- | --- |
-| 1xx – Provisional | Informational responses |     |     |
-| 100 | Trying | Request received, processing | Initial response to INVITE |
-| 180 | Ringing | Callee is being alerted | Phone is ringing |
-| 183 | Session Progress | Call is being set up | Early media (e.g., call waiting tones) |
-| 2xx – Success | Successful responses |     |     |
-| 200 | OK  | Request succeeded | REGISTER, INVITE, BYE, etc. |
-| 3xx – Redirection | Further action needed |     |     |
-| 301 | Moved Permanently | Use new contact | SIP address changed permanently |
-| 302 | Moved Temporarily | Use alternative contact | Temporary redirection |
-| 4xx – Client Error | Request has a problem |     |     |
-| 400 | Bad Request | Malformed request | Syntax error in SIP message |
-| 401 | Unauthorized | Authentication required | REGISTER or INVITE needs credentials |
-| 403 | Forbidden | Server refuses to fulfill | Access denied |
-| 404 | Not Found | User not found | Target SIP URI does not exist |
-| 407 | Proxy Auth Req | Auth required at proxy | Used by SIP proxies |
-| 415 | Unsupported Media Type | Unsupported body format | SDP/media type not supported |
-| 486 | Busy Here | User is busy | Callee is currently on another call |
-| 5xx – Server Error | Server failed to fulfill |     |     |
-| 500 | Server Internal Error | Server failure | Unexpected internal problem |
-| 503 | Service Unavailable | Temporarily unavailable | Overload, maintenance |
-| 6xx – Global Error | Global failure |     |     |
-| 600 | Busy Everywhere | No point in trying other routes | All endpoints are busy |
-| 603 | Decline | Call rejected | User chose not to accept the call |
+| Code                   | Category                   | Meaning                         | Typical Use Case                       |
+| ---------------------- | -------------------------- | ------------------------------- | -------------------------------------- |
+| **1xx – Provisional**  | *Informational responses*  |                                 |                                        |
+| 100                    | Trying                     | Request received, processing    | Initial response to INVITE             |
+| 180                    | Ringing                    | Callee is being alerted         | Phone is ringing                       |
+| 183                    | Session Progress           | Call is being set up            | Early media (e.g., call waiting tones) |
+| **2xx – Success**      | *Successful responses*     |                                 |                                        |
+| 200                    | OK                         | Request succeeded               | REGISTER, INVITE, BYE, etc.            |
+| **3xx – Redirection**  | *Further action needed*    |                                 |                                        |
+| 301                    | Moved Permanently          | Use new contact                 | SIP address changed permanently        |
+| 302                    | Moved Temporarily          | Use alternative contact         | Temporary redirection                  |
+| **4xx – Client Error** | *Request has a problem*    |                                 |                                        |
+| 400                    | Bad Request                | Malformed request               | Syntax error in SIP message            |
+| 401                    | Unauthorized               | Authentication required         | REGISTER or INVITE needs credentials   |
+| 403                    | Forbidden                  | Server refuses to fulfill       | Access denied                          |
+| 404                    | Not Found                  | User not found                  | Target SIP URI does not exist          |
+| 407                    | Proxy Auth Req             | Auth required at proxy          | Used by SIP proxies                    |
+| 415                    | Unsupported Media Type     | Unsupported body format         | SDP/media type not supported           |
+| 486                    | Busy Here                  | User is busy                    | Callee is currently on another call    |
+| **5xx – Server Error** | *Server failed to fulfill* |                                 |                                        |
+| 500                    | Server Internal Error      | Server failure                  | Unexpected internal problem            |
+| 503                    | Service Unavailable        | Temporarily unavailable         | Overload, maintenance                  |
+| **6xx – Global Error** | *Global failure*           |                                 |                                        |
+| 600                    | Busy Everywhere            | No point in trying other routes | All endpoints are busy                 |
+| 603                    | Decline                    | Call rejected                   | User chose not to accept the call      |
