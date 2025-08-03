@@ -2,7 +2,16 @@ name: "CodeQL"
 on: [push]
 jobs:
   analyze:
-    runs-on: windows-latest
+    name: Analyze
+    runs-on: windows-latest  # or ubuntu-latest/macos-latest
     steps:
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4  # Use latest checkout
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: 'javascript'  # Replace with your language (java, python, cpp, etc.)
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
