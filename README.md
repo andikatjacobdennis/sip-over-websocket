@@ -10,7 +10,7 @@ A high-performance SIP (Session Initiation Protocol) server and client implement
 - **WebSocket Transport**: Full SIP protocol support over WebSocket transport (RFC 7118)
 - **Scalable Architecture**: Designed for horizontal scaling in cloud environments
 - **Enterprise-grade**: Production-ready with proper error handling and recovery
-- **Modern .NET**: Built with .NET 6+ for high performance
+- **Modern .NET**: Built with .NET 9+ for high performance
 - **Full SIP Core**: Supports REGISTER, INVITE, BYE, OPTIONS methods
 - **Call Management**: Complete call state tracking and routing
 
