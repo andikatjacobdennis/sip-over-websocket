@@ -234,3 +234,17 @@ SIP Server → Alice: 200 OK
 | **6xx – Global Error** | _Global failure_           |                                 |                                        |
 | 600                    | Busy Everywhere            | No point in trying other routes | All endpoints are busy                 |
 | 603                    | Decline                    | Call rejected                   | User chose not to accept the call      |
+
+## **SIP & VoIP Abbreviations**
+
+| Abbreviation      | Full Form                      | Description                                                           |
+| ----------------- | ------------------------------ | --------------------------------------------------------------------- |
+| **SIP**           | Session Initiation Protocol    | Protocol used to initiate, maintain, and terminate real-time sessions |
+| **SDP**           | Session Description Protocol   | Describes media parameters (codecs, ports, etc.) in SIP messages      |
+| **RTP**           | Real-Time Transport Protocol   | Protocol for delivering audio/video over IP networks                  |
+| **MSRP**          | Message Session Relay Protocol | Protocol for file transfer and messaging over SIP                     |
+| **IP**            | Internet Protocol              | Network protocol for sending data across devices                      |
+| **TCP**           | Transmission Control Protocol  | Reliable, connection-oriented transport protocol                      |
+| **UDP**           | User Datagram Protocol         | Lightweight, connectionless transport protocol (often used with RTP)  |
+| **URI**           | Uniform Resource Identifier    | Identifies a resource (e.g., sip\:alice\@company.com)                 |
+| **ACK**           | Acknowledgment                 | Confirms receipt of 200 OK after INVITE                               |
