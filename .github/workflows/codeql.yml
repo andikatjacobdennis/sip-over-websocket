@@ -1,17 +1,48 @@
 name: "CodeQL"
-on: [push]
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
+  schedule:
+    - cron: '0 1 * * 0'  # weekly scan on Sundays at 01:00 UTC
+
 jobs:
   analyze:
     name: Analyze
-    runs-on: windows-latest  # or ubuntu-latest/macos-latest
+    runs-on: windows-latest
+
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'csharp' ]
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # Use latest checkout
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'  # Use .NET 9 preview or final when available
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
-          languages: 'javascript'  # Replace with your language (java, python, cpp, etc.)
+          languages: ${{ matrix.language }}
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build project
+        run: dotnet build --no-restore
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
