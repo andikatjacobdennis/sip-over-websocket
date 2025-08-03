@@ -79,7 +79,6 @@ SIP/2.0 200 OK
 Contact: <sip:bob@192.168.1.200:5060>;expires=3600
 ```
 
-
 ### 📌 **CALL ESTABLISHMENT PHASE**
 
 Alice initiates a call to Bob using SIP INVITE and includes SDP to offer audio and file transfer capabilities via MSRP.
@@ -142,7 +141,6 @@ Alice → SIP Server: ACK
 SIP Server → Bob: ACK
 ```
 
-
 ### 📌 **MEDIA SESSION PHASE**
 
 #### 12. **RTP Audio Communication:**
@@ -169,7 +167,6 @@ Bob → Alice:
 MSRP d93k 200 OK----d93k$
 ```
 
-
 ### 📌 **CALL TERMINATION PHASE**
 
 #### 14. Alice hangs up:
@@ -187,8 +184,7 @@ Bob → SIP Server: 200 OK
 SIP Server → Alice: 200 OK
 ```
 
-
-### ✅ Summary
+### Summary
 
 | Phase            | Protocol  | Purpose                    |
 | ---------------- | --------- | -------------------------- |
@@ -211,22 +207,20 @@ Bob → SIP Server: 200 OK
 
 SIP Server → Alice: 200 OK
 
-SIP Response Codes Table
-
-## 📘 **SIP Response Codes Table**
+## **SIP Response Codes Table**
 
 | Code                   | Category                   | Meaning                         | Typical Use Case                       |
 | ---------------------- | -------------------------- | ------------------------------- | -------------------------------------- |
-| **1xx – Provisional**  | *Informational responses*  |                                 |                                        |
+| **1xx – Provisional**  | _Informational responses_  |                                 |                                        |
 | 100                    | Trying                     | Request received, processing    | Initial response to INVITE             |
 | 180                    | Ringing                    | Callee is being alerted         | Phone is ringing                       |
 | 183                    | Session Progress           | Call is being set up            | Early media (e.g., call waiting tones) |
-| **2xx – Success**      | *Successful responses*     |                                 |                                        |
+| **2xx – Success**      | _Successful responses_     |                                 |                                        |
 | 200                    | OK                         | Request succeeded               | REGISTER, INVITE, BYE, etc.            |
-| **3xx – Redirection**  | *Further action needed*    |                                 |                                        |
+| **3xx – Redirection**  | _Further action needed_    |                                 |                                        |
 | 301                    | Moved Permanently          | Use new contact                 | SIP address changed permanently        |
 | 302                    | Moved Temporarily          | Use alternative contact         | Temporary redirection                  |
-| **4xx – Client Error** | *Request has a problem*    |                                 |                                        |
+| **4xx – Client Error** | _Request has a problem_    |                                 |                                        |
 | 400                    | Bad Request                | Malformed request               | Syntax error in SIP message            |
 | 401                    | Unauthorized               | Authentication required         | REGISTER or INVITE needs credentials   |
 | 403                    | Forbidden                  | Server refuses to fulfill       | Access denied                          |
@@ -234,9 +228,9 @@ SIP Response Codes Table
 | 407                    | Proxy Auth Req             | Auth required at proxy          | Used by SIP proxies                    |
 | 415                    | Unsupported Media Type     | Unsupported body format         | SDP/media type not supported           |
 | 486                    | Busy Here                  | User is busy                    | Callee is currently on another call    |
-| **5xx – Server Error** | *Server failed to fulfill* |                                 |                                        |
+| **5xx – Server Error** | _Server failed to fulfill_ |                                 |                                        |
 | 500                    | Server Internal Error      | Server failure                  | Unexpected internal problem            |
 | 503                    | Service Unavailable        | Temporarily unavailable         | Overload, maintenance                  |
-| **6xx – Global Error** | *Global failure*           |                                 |                                        |
+| **6xx – Global Error** | _Global failure_           |                                 |                                        |
 | 600                    | Busy Everywhere            | No point in trying other routes | All endpoints are busy                 |
 | 603                    | Decline                    | Call rejected                   | User chose not to accept the call      |
