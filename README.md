@@ -2,7 +2,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![.NET](https://img.shields.io/badge/.NET-9.0-purple.svg)
-[![CodeQL](https://github.com/andikatjacobdennis/sip-over-websocket/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/andikatjacobdennis/sip-over-websocket/actions/workflows/codeql-analysis.yml)
+[![CodeQL](https://github.com/andikatjacobdennis/sip-over-websocket/actions/workflows/codeql.yml/badge.svg)](https://github.com/andikatjacobdennis/sip-over-websocket/actions/workflows/codeql.yml)
 [![Open Issues](https://img.shields.io/github/issues-raw/andikatjacobdennis/sip-over-websocket)](https://github.com/yourusername/sip-over-websocket/issues)
 
 A production-ready SIP (Session Initiation Protocol) implementation using WebSockets for modern real-time communication systems.
