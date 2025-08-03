@@ -8,6 +8,7 @@
 A production-ready SIP (Session Initiation Protocol) implementation using WebSockets for modern real-time communication systems.
 
 ## Table of Contents
+
 - [Features](#features)
 - [Architecture](#architecture)
 - [Installation](#installation)
@@ -50,6 +51,7 @@ sequenceDiagram
 ## Installation
 
 ### Prerequisites
+
 - .NET 9.0+ SDK
 - WebSocket-compatible environment
 
@@ -62,12 +64,14 @@ dotnet restore
 ## Usage
 
 **Start Server:**
+
 ```bash
 cd SipServer
 dotnet run --port 8089
 ```
 
 **Start Client:**
+
 ```bash
 cd SipConsoleClient
 dotnet run
@@ -76,6 +80,7 @@ dotnet run
 ## Configuration
 
 Edit `appsettings.json`:
+
 ```json
 {
   "SipSettings": {
@@ -101,21 +106,25 @@ Edit `appsettings.json`:
 ### Debugging Tips
 
 1. **Server Logs**:
+
    ```bash
    dotnet run --loglevel Debug
    ```
 
 2. **Test WebSocket Connection**:
+
    ```bash
    wscat -c ws://localhost:8089
    ```
 
 3. **Network Inspection**:
+
    ```bash
    tcpdump -i any -n port 8089 -w sip_capture.pcap
    ```
 
 4. **Client Verbose Mode**:
+
    ```bash
    dotnet run --verbose true
    ```
