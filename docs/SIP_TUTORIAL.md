@@ -237,14 +237,23 @@ SIP Server → Alice: 200 OK
 
 ## **SIP & VoIP Abbreviations**
 
-| Abbreviation      | Full Form                      | Description                                                           |
-| ----------------- | ------------------------------ | --------------------------------------------------------------------- |
-| **SIP**           | Session Initiation Protocol    | Protocol used to initiate, maintain, and terminate real-time sessions |
-| **SDP**           | Session Description Protocol   | Describes media parameters (codecs, ports, etc.) in SIP messages      |
-| **RTP**           | Real-Time Transport Protocol   | Protocol for delivering audio/video over IP networks                  |
-| **MSRP**          | Message Session Relay Protocol | Protocol for file transfer and messaging over SIP                     |
-| **IP**            | Internet Protocol              | Network protocol for sending data across devices                      |
-| **TCP**           | Transmission Control Protocol  | Reliable, connection-oriented transport protocol                      |
-| **UDP**           | User Datagram Protocol         | Lightweight, connectionless transport protocol (often used with RTP)  |
-| **URI**           | Uniform Resource Identifier    | Identifies a resource (e.g., sip\:alice\@company.com)                 |
-| **ACK**           | Acknowledgment                 | Confirms receipt of 200 OK after INVITE                               |
+| Abbreviation | Full Form                      | Description                                                             |
+| ------------ | ------------------------------ | ----------------------------------------------------------------------- |
+| **SIP**      | Session Initiation Protocol    | Protocol used to initiate and manage VoIP calls and multimedia sessions |
+| **VoIP**     | Voice over Internet Protocol   | Technology for voice communication over IP networks                     |
+| **SDP**      | Session Description Protocol   | Describes media session parameters (e.g., codecs, IP, port)             |
+| **RTP**      | Real-Time Transport Protocol   | Transmits audio/video data in real-time over IP networks                |
+| **RTCP**     | Real-Time Control Protocol     | Works with RTP to monitor transmission quality                          |
+| **MSRP**     | Message Session Relay Protocol | Used for file transfer and chat during SIP sessions                     |
+| **IP**       | Internet Protocol              | Provides addressing and routing for devices on networks                 |
+| **UDP**      | User Datagram Protocol         | Lightweight transport layer for time-sensitive data like RTP            |
+| **TCP**      | Transmission Control Protocol  | Reliable transport protocol for SIP signaling or MSRP                   |
+| **URI**      | Uniform Resource Identifier    | Identifies resources like SIP addresses                                 |
+| **QoS**      | Quality of Service             | Mechanism to prioritize VoIP traffic for better audio quality           |
+| **Jitter**   | N/A                            | Variation in packet arrival time (affects voice quality)                |
+| **Latency**  | N/A                            | Delay in packet transmission (impacts real-time communication)          |
+| **Codec**    | Coder/Decoder                  | Converts audio between analog and digital formats                       |
+| **PCMU**     | Pulse Code Modulation (µ-law)  | Common audio codec (G.711 µ-law)                                        |
+| **PCMA**     | Pulse Code Modulation (A-law)  | Common audio codec (G.711 A-law)                                        |
+| **G.711**    | ITU Audio Codec Standard       | High-quality, low-compression codec                                     |
+| **G.729**    | ITU Audio Codec Standard       | Compressed codec (low bandwidth)                                        |
